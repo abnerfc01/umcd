@@ -17,9 +17,6 @@ function createReference() {
       
     }
     else{
-      
-    
-    
     if (sVerse2 != "") {
       var reference = "https://www.bible.com/pt/bible/129/" + sBook +"." + sChapter + "." + sVerse1
         reference += "-" + sVerse2 + ".NVI";
@@ -33,8 +30,6 @@ function createReference() {
         "." +
         sVerse1 +
         ".NVI";
-      
-      
     }
       }
     return reference;
