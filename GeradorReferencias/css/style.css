@@ -1,0 +1,72 @@
+body {
+    font-family: 'Roboto Mono', monospace;
+    min-height: 854px;
+    background-image: url('https://cdn.pensador.com/img/authors/bi/bl/biblia-sagrada-l.jpg');
+    background-color: #000000;
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    padding-bottom: 20vh;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+}
+
+.page-title {
+    color: #000000;
+    margin: 5px 0;
+}
+
+select {
+    padding: .8rem 1.5rem;
+    margin: 1rem 0;
+    border-radius: 5px;
+    border: none;
+    font-size: 1rem;
+}
+
+button {
+  padding: .8rem 1.5rem;
+  margin: 1rem 0;
+  border-radius: 5px;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+}
+button:hover{
+  box-shadow: 2px 2px #FFB71E;
+  transform: scale(1.05)
+}
+button:disabled{
+  cursor: auto;
+  box-shadow: none; 
+}
+
+#containerGeradorLinks {
+    height: 400px;
+    width: 100%;
+    color: #DCC481;
+    float: left;
+    vertical-align: middle;
+    border-style: solid;
+    border-color: #000000;
+}
+
+#camposInputs {
+    width: 50%;
+    margin-left: 25%;
+}
+
+inp {
+  padding: .8rem 1.5rem;  
+  width: 50%;
+    margin-left: 25%;
+}
+
+label {
+    width: 50%;
+    margin-left: 12%;
+    color: #000000;
+}
