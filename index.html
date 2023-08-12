@@ -14,6 +14,13 @@
     <div id="containerGeradorLinks">
 
       <div id="camposInputs">
+        <div id="Line0">
+          <label for="version">Escolha a versão da Bíblia:</label>
+          <select id="version">
+            <option value="129">NVI | Nova Versão Internacional</option>
+            <option value="1966">NBV-P | Nova Vida Viva - Português</option>
+            <option value="212">ARC | Almeida Revista e Corrigida</option>
+          </select>
         <div id="Line1">
           <label for='lblLivro'>Livro:</label>
           <select id="book" name="selectBook">
@@ -112,14 +119,14 @@
         </div>
 
         <button id="geraLink" onclick="exibeLink()">Gerar Link</button>
-
-        <h3 id='LinkYouVersion'></h3>
+        <h3 id="LinkYouVersion"></h3>
         <button id="btnCopyClipboard" onclick="copyClipboard()" disabled="true">Copiar Link</button>
-        <h4 id='CopyDone'></h4>
+        <h4 id="CopyDone"></h4>
         <div style="opacity:0">
           <input type="text" id="copyText" />
-
         </div>
+
+       
       </div>
     </div>
   </div>
