@@ -1,39 +1,65 @@
+// ... (código anterior)
+
+// Função para obter as informações da versão selecionada
+function getVersionInfo(version) {
+  var versions = {
+    "129": {
+      "name": "Nova Vida",
+      "abbr": "129",
+      "final":"NVI",
+      "url": "https://www.bible.com/pt/bible/129/"
+    },
+    "1966": {
+      "name": "Versão 1966",
+      "abbr": "1966",
+      "final":"abr",
+      "url": "https://www.bible.com/pt/bible/1966/"
+    },
+    "212": {
+      "name": "Versão 1966",
+      "abbr": "212",
+      "final":"ARC",
+      "url": "https://www.bible.com/pt/bible/212/"
+    }
+  };
+
+  return versions[version];
+}
+
 function createReference() {
-    var selectBook = document.querySelector("#book");
-    var sBook = selectBook.value;
+  var selectVersion = document.querySelector("#version");
+  var sVersion = selectVersion.value;
   
-    var selectChapter = document.querySelector("#chapter");
-    var sChapter = selectChapter.value;
-  
-    var selectVerse1 = document.querySelector("#verse1");
-    var sVerse1 = selectVerse1.value;
-  
-    var selectVerse2 = document.querySelector("#verse2");
-    var sVerse2 = selectVerse2.value;
-  
-    if (sVerse1 == "" || sChapter == ""){
-      
-      return "ERROR"
-      
-    }
-    else{
+  var versionInfo = getVersionInfo(sVersion);
+
+  var selectBook = document.querySelector("#book");
+  var sBook = selectBook.value;
+
+  var selectChapter = document.querySelector("#chapter");
+  var sChapter = selectChapter.value;
+
+  var selectVerse1 = document.querySelector("#verse1");
+  var sVerse1 = selectVerse1.value;
+
+  var selectVerse2 = document.querySelector("#verse2");
+  var sVerse2 = selectVerse2.value;
+
+  if (sVerse1 == "" || sChapter == "") {
+    return "ERROR";
+  } else {
+    var reference = versionInfo.url + sBook + "." + sChapter + "." + sVerse1;
+
     if (sVerse2 != "") {
-      var reference = "https://www.bible.com/pt/bible/129/" + sBook +"." + sChapter + "." + sVerse1
-        reference += "-" + sVerse2 + ".NVI";
-      console.log(reference);
+      reference += "-" + sVerse2 + "." +  versionInfo.final;
     } else {
-      var reference =
-        "https://www.bible.com/pt/bible/129/" +
-        sBook +
-        "." +
-        sChapter +
-        "." +
-        sVerse1 +
-        ".NVI";
+      reference += "." + versionInfo.final;
     }
-      }
+
+    console.log(reference);
     return reference;
   }
+}
+
   
   function exibeLink() {
     
